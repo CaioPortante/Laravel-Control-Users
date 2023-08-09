@@ -46,8 +46,15 @@ class UserController extends Controller
 
     }
 
-    public function logIn(){
-        
+    public function get(){
+
+        $users = DB::table("users")
+            ->join("user_phone", "users.id", "=", "user_phone.user_id")
+            ->select("users.id", "users.name", "users.email", "user_phone.phone")
+            ->get();
+
+        return view("users", compact("users"));
+
     }
 
     public function update(){
