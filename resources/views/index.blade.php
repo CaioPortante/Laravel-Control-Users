@@ -37,7 +37,7 @@
 
                     <div class="input-div">
                         <label class="input-label">Telefone</label>
-                        <input class="input-form" type="text" name="phone" placeholder="Telefone" />
+                        <input class="input-form phone" type="text" name="phone" placeholder="(00) 00000-0000" />
                     </div>
 
                     <div class="input-div-submit">
@@ -76,6 +76,10 @@
                 }
             })
 
+        })
+
+        $(".phone").on("keyup", (input)=>{
+            input.target.value = checkPhone(input.target)
         })
     </script>
 
