@@ -2,7 +2,7 @@
 
 Crie uma aplicação web utilizando Laravel, jQuery, HTML e CSS que permita cadastrar usuários, exibir a lista de usuários cadastrados em uma tabela e excluir usuários.
 
-Requisitos:
+<h5>Requisitos:</h5>
 
 <p>A aplicação deve ter uma página inicial com um formulário de cadastro de usuário;</p>
 <p>O formulário de cadastro de usuário deve ter os seguintes campos: nome, e-mail e telefone;</p>
@@ -11,7 +11,12 @@ Requisitos:
 <p>Ao clicar no botão de exclusão na tabela, o usuário correspondente deve ser removido da lista de usuários cadastrados e a tabela deve ser atualizada;</p>
 <p>O aplicativo deve ter um layout básico utilizando HTML e CSS;</p>
 
-Adicional:  
+<h5>Adicional:</h5>
 
 <p>Você pode criar uma estrutura de login para cada usuário cadastrado;</p>
 <p>Você pode criar uma estrutura para poder cadastrar mais de um telefone para o usuário;</p>
+
+
+<h4>Instruções:</h4>
+
+<p>1 - Clonar repositorio: rodar comando 'git clone *link do repositório no github*'</p>
