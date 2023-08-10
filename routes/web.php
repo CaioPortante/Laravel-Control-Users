@@ -20,9 +20,10 @@ Route::get('/', function () {
 
 /* Route::post('login-form')->name('login-form'); */
 
-Route::get('/register', function () {
+/* Route::get('/register', function () {
     return view('register');
-})->name('register');
+})->name('register'); */
 
-Route::get('/register/create', [UserController::class, 'register'])->name('register.create');
 Route::get('/users', [UserController::class, 'get'])->name('users');
+Route::get('/users/create', [UserController::class, 'register'])->name('users.create');
+Route::get('/users/delete', [UserController::class, 'delete'])->name('users.delete');

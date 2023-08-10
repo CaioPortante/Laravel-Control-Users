@@ -57,11 +57,20 @@ class UserController extends Controller
 
     }
 
-    public function update(){
-        
-    }
+    public function delete(Request $request){
 
-    public function delete(){
-        
+        $status = [
+            200=>"Usuário Cadastrado",
+            300=>"Dados não aceitos",
+        ];
+
+        if(User::where("id", $request->id)->delete()){
+            $result = 200;
+        } else{
+            $result = 300;
+        }
+
+        return $status[$result];
+
     }
 }

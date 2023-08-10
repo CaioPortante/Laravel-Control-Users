@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Bem Vindo!</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -17,55 +17,10 @@
     </head>
     <body class="antialiased">
         <div class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
-            <form id="createUser">
-
-                <div>
-                    <label>Nome</label>
-                    <input type="text" name="name" placeholder="Nome" />
-                </div>
-
-                <div>
-                    <label>Email</label>
-                    <input type="text" name="email" placeholder="Email" />
-                </div>
-
-                <div>
-                    <label>Telefone</label>
-                    <input type="text" name="phone" placeholder="Telefone" />
-                </div>
-
-                <div>
-                    <button type="submit">Criar</button>
-                </div>
-
-            </form>
+            <div class="max-w-7xl mx-auto p-6 lg:p-8">
+                <a href="{{ route('users') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Usuários</a>
+                <a href="{{ route('users') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Registrar</a>
+            </div>
         </div>
     </body>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script>
-        $("#createUser").on("submit", (form)=>{
-
-            form.preventDefault();
-
-            const name = $("#createUser")[0][0].value;
-            const mail = $("#createUser")[0][1].value;
-            const phone = $("#createUser")[0][2].value;
-
-            $.ajax({
-                url: "{{ route("register.create") }}",
-                method: "GET",
-                data: {
-                    name: name,
-                    mail: mail,
-                    phone: phone,
-                },
-                success: (data)=>{
-                    console.log(data)
-                }
-            })
-
-        })
-    </script>
-
 </html>
