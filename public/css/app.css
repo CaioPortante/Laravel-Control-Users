@@ -1,0 +1,101 @@
+body {
+    color: rgb(255, 255, 255);
+    font-size: large;
+}
+
+th {
+    background-color: #dcdcdcbe;
+    color: rgb(59, 59, 59);
+}
+
+td, th {
+    padding: 10px;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 2px;
+}
+
+h4 {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.726);
+}
+
+.deleteBtn {
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 7%;
+    background-color: rgb(255, 91, 91);
+}
+
+.submitBtn {
+    background-color: #111827 !important;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5%;
+}
+
+.form-div {
+    background-color: #A8AAAE;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 25px;
+    padding: 25px;
+    width: 45%;
+    height: 40%;
+}
+
+.input-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+.input-div-submit {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    padding-right: 25px;
+}
+
+.input-label {
+    width: 25%;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.57);
+}
+
+.input-form {
+    width: 75%;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 15px;
+    border-color: #cacaca;
+    color: black;
+}
+
+.addPhone {
+    background-color: #111827e8 !important;
+    padding: 5px;
+    border-radius: 5%;
+    margin-right: 15px;
+    white-space: nowrap;
+}
+
+.redirects {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin: 5px;
+}
+
+.div-master {
+    display: flex;
+    flex-direction: column;
+}
+
+.users-link {
+    width: 45%;
+}
