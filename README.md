@@ -1,7 +1,7 @@
 # Laravel-Control-Users
 
 Crie uma aplicação web utilizando Laravel, jQuery, HTML e CSS que permita cadastrar usuários, exibir a lista de usuários cadastrados em uma tabela e excluir usuários.
-
+<hr>
 <h5>Requisitos:</h5>
 
 <p>A aplicação deve ter uma página inicial com um formulário de cadastro de usuário;</p>
@@ -15,7 +15,7 @@ Crie uma aplicação web utilizando Laravel, jQuery, HTML e CSS que permita cada
 
 <p>Você pode criar uma estrutura de login para cada usuário cadastrado;</p>
 <p>Você pode criar uma estrutura para poder cadastrar mais de um telefone para o usuário;</p>
-
+<hr>
 <h4>Ferramentas Usadas:</h4>
 
 <p>PHP 8.2.0</p>
@@ -23,9 +23,16 @@ Crie uma aplicação web utilizando Laravel, jQuery, HTML e CSS que permita cada
 <p>Laravel Framework 10.18.0</p>
 <p>XAMPP - para simular ambiente de Banco de Dados</p>
 
+<hr>
 <h4>Instruções:</h4>
 
 <p>1 - Clonar repositorio: rodar comando 'git clone *link do repositório no github*'</p>
 <p>2 - Installar dependências: rodar comando 'composer install'</p>
 <p>3 - Executar Migrations/Banco de dados: rodar comandos 'php artisan migrate'</p>
 <p>4 - Executar servidor artisan: rodar comando 'php artisan serve'</p>
+
+<hr>
+<h4>Detalhes Adicionais</h4>
+
+<p>Para testar a funcionalidade de Login, use a senha '123' que é gerada automaticamente ao cadastrar um usuário</p>
+
