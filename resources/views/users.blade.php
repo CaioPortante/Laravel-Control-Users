@@ -34,12 +34,16 @@
                     <tbody>
                         @foreach ($users as $user)
                             <tr>
-                                <td>{{ $user->id }}</td>
-                                <td>{{ $user->name }}</td>
-                                <td>{{ $user->email }}</td>
-                                <td>{{ $user->phone }}</td>
+                                <td>{{ $user['id'] }}</td>
+                                <td>{{ $user['name'] }}</td>
+                                <td>{{ $user['email'] }}</td>
                                 <td>
-                                    <button class="deleteBtn" data-id="{{ $user->id }}">Deletar</button>
+                                    @php
+                                        echo implode(' | ', $user['phone'])
+                                    @endphp
+                                </td>
+                                <td>
+                                    <button class="deleteBtn" data-id="{{ $user['id'] }}">Deletar</button>
                                 </td>
                             </tr>
                         @endforeach

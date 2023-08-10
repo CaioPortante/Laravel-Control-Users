@@ -40,6 +40,11 @@
                         <input class="input-form phone" type="text" name="phone" placeholder="(00) 00000-0000" />
                     </div>
 
+                    <div class="input-div">
+                        <label class="input-label">Telefone</label>
+                        <input class="input-form phone" type="text" name="phone" placeholder="(00) 00000-0000" />
+                    </div>
+
                     <div class="input-div-submit">
                         <button class="submitBtn" type="submit">Cadastrar</button>
                     </div>
@@ -56,9 +61,19 @@
 
             form.preventDefault();
 
-            const name = $("#createUser")[0][0].value;
-            const mail = $("#createUser")[0][1].value;
-            const phone = $("#createUser")[0][2].value;
+            const name = $(".input-form")[0].value;
+            const mail = $(".input-form")[1].value;
+            let phones = [];
+
+            for (let index = 0; index < $(".phone").length; index++) {
+
+                const phone = $(".phone")[index];
+                
+                if(phone.value != ''){
+                    phones.push(phone.value)
+                }
+
+            }
 
             $.ajax({
                 url: `{{ route("users.create") }}`,
@@ -66,12 +81,12 @@
                 data: {
                     name: name,
                     mail: mail,
-                    phone: phone,
+                    phone: phones,
                 },
                 success: (data)=>{
                     sendNotification(document.querySelector(".input-div-submit"), data)
                     setTimeout(() => {
-                        window.location = "{{ route('users') }}";
+                       window.location = "{{ route('users') }}";
                     }, 5700);
                 }
             })
