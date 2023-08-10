@@ -29,6 +29,7 @@ h4 {
 }
 
 .submitBtn {
+    background-color: #111827 !important;
     padding: 5px;
     padding-left: 10px;
     padding-right: 10px;
@@ -36,7 +37,7 @@ h4 {
 }
 
 .form-div {
-    background-color: #d1d0d0;
+    background-color: #A8AAAE;
     border-width: 1px;
     border-color: black;
     border-radius: 25px;
@@ -73,4 +74,20 @@ h4 {
     border-radius: 15px;
     border-color: #cacaca;
     color: black;
+}
+
+.redirects {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin: 5px;
+}
+
+.div-master {
+    display: flex;
+    flex-direction: column;
+}
+
+.users-link {
+    width: 45%;
 }

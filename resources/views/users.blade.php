@@ -18,6 +18,9 @@
     <body class="antialiased">
         <div class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
             <div class="max-w-7xl mx-auto p-6 lg:p-8">
+                <div class="redirects">
+                    <a href="{{ route("index") }}">Criar um usuário</a>
+                </div>
                 <table>
                     <thead>
                         <tr>
@@ -47,19 +50,20 @@
     </body>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
     <script>
         $(".deleteBtn").on("click", (btn)=>{
 
             const id = btn.target.dataset.id
 
             $.ajax({
-                url: "route('users.delete')",
+                url: "{{ route('users.delete') }}",
                 method: "GET",
                 data: {
                     id: id,
                 },
                 success: (data)=>{
-                    console.log(data)
+                    sendNotification(btn.target.parentNode.parentNode, data)
                 }
             })
 

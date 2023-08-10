@@ -16,7 +16,10 @@
         </style>
     </head>
     <body class="antialiased">
-        <div class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
+        <div class="relative sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white div-master">
+            <div class="redirects users-link">
+                <a href="{{ route("users") }}">Lista de Usuários</a>
+            </div>
             <div class="form-div">
                 <form id="createUser">
 
@@ -38,7 +41,7 @@
                     </div>
 
                     <div class="input-div-submit">
-                        <button class="submitBtn" type="submit">Criar</button>
+                        <button class="submitBtn" type="submit">Cadastrar</button>
                     </div>
 
                 </form>
@@ -47,6 +50,7 @@
     </body>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
     <script>
         $("#createUser").on("submit", (form)=>{
 
@@ -57,7 +61,7 @@
             const phone = $("#createUser")[0][2].value;
 
             $.ajax({
-                url: "{{ route("users.create") }}",
+                url: `{{ route("users.create") }}`,
                 method: "GET",
                 data: {
                     name: name,
@@ -65,7 +69,10 @@
                     phone: phone,
                 },
                 success: (data)=>{
-                    console.log(data)
+                    sendNotification(document.querySelector(".input-div-submit"), data)
+                    setTimeout(() => {
+                        window.location = "{{ route('users') }}";
+                    }, 5700);
                 }
             })
 

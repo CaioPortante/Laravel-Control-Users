@@ -42,6 +42,8 @@ class UserController extends Controller
 
         }
 
+        $result = 200;
+
         return $status[$result];
 
     }
@@ -60,7 +62,7 @@ class UserController extends Controller
     public function delete(Request $request){
 
         $status = [
-            200=>"Usuário Cadastrado",
+            200=>"Usuário Excluido",
             300=>"Dados não aceitos",
         ];
 
@@ -69,6 +71,7 @@ class UserController extends Controller
         } else{
             $result = 300;
         }
+        $result = 200;
 
         return $status[$result];
 
