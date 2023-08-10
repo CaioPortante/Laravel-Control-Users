@@ -17,28 +17,32 @@
     </head>
     <body class="antialiased">
         <div class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
-            <form id="createUser">
+            <div class="form-div">
+                <form id="createUser">
 
-                <div>
-                    <label>Nome</label>
-                    <input type="text" name="name" placeholder="Nome" />
-                </div>
+                    <h4><strong>Criar um Usuário</strong></h4>
 
-                <div>
-                    <label>Email</label>
-                    <input type="text" name="email" placeholder="Email" />
-                </div>
+                    <div class="input-div">
+                        <label class="input-label">Nome</label>
+                        <input class="input-form" type="text" name="name" placeholder="Nome" />
+                    </div>
 
-                <div>
-                    <label>Telefone</label>
-                    <input type="text" name="phone" placeholder="Telefone" />
-                </div>
+                    <div class="input-div">
+                        <label class="input-label">Email</label>
+                        <input class="input-form" type="text" name="email" placeholder="Email" />
+                    </div>
 
-                <div>
-                    <button type="submit">Criar</button>
-                </div>
+                    <div class="input-div">
+                        <label class="input-label">Telefone</label>
+                        <input class="input-form" type="text" name="phone" placeholder="Telefone" />
+                    </div>
 
-            </form>
+                    <div class="input-div-submit">
+                        <button class="submitBtn" type="submit">Criar</button>
+                    </div>
+
+                </form>
+            </div>
         </div>
     </body>
 
