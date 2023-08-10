@@ -27,25 +27,23 @@
 
                     <div class="input-div">
                         <label class="input-label">Nome</label>
-                        <input class="input-form" type="text" name="name" placeholder="Nome" />
+                        <input class="input-form" type="text" name="name" placeholder="Nome" required />
                     </div>
 
                     <div class="input-div">
                         <label class="input-label">Email</label>
-                        <input class="input-form" type="text" name="email" placeholder="Email" />
+                        <input class="input-form" type="text" name="email" placeholder="Email" required />
                     </div>
-
-                    <div class="input-div">
-                        <label class="input-label">Telefone</label>
-                        <input class="input-form phone" type="text" name="phone" placeholder="(00) 00000-0000" />
-                    </div>
-
-                    <div class="input-div">
-                        <label class="input-label">Telefone</label>
-                        <input class="input-form phone" type="text" name="phone" placeholder="(00) 00000-0000" />
+                    
+                    <div id="phone-div">
+                        <div class="input-div">
+                            <label class="input-label">Telefone</label>
+                            <input class="input-form phone" type="text" name="phone" placeholder="(00) 00000-0000" required />
+                        </div>
                     </div>
 
                     <div class="input-div-submit">
+                        <button class="addPhone" type="button">Adicionar Telefone</button>
                         <button class="submitBtn" type="submit">Cadastrar</button>
                     </div>
 
@@ -96,6 +94,18 @@
         $(".phone").on("keyup", (input)=>{
             input.target.value = checkPhone(input.target)
         })
+
+        $(".addPhone").on("click", (btn)=>{
+            document.getElementById("phone-div").innerHTML += `<div class="input-div">
+                <label class="input-label">Telefone</label>
+                <input class="input-form phone" type="text" name="phone" placeholder="(00) 00000-0000" onkeyup="treatPhone(this)" />
+            </div>`
+        })
+
+        function treatPhone(input){
+            input.value = checkPhone(input)
+        }
+
     </script>
 
 </html>

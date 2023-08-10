@@ -33,7 +33,7 @@ h4 {
     padding: 5px;
     padding-left: 10px;
     padding-right: 10px;
-    border-radius: 7%;
+    border-radius: 5%;
 }
 
 .form-div {
@@ -74,6 +74,14 @@ h4 {
     border-radius: 15px;
     border-color: #cacaca;
     color: black;
+}
+
+.addPhone {
+    background-color: #111827e8 !important;
+    padding: 5px;
+    border-radius: 5%;
+    margin-right: 15px;
+    white-space: nowrap;
 }
 
 .redirects {
